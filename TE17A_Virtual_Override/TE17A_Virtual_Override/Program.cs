@@ -10,13 +10,14 @@ namespace TE17A_Virtual_Override
     {
         static void Main(string[] args)
         {
+
             Weapon w = new CursedWeapon();
 
             int monsterhp = 55;
 
             monsterhp -= w.Attack();
 
-            Console.WriteLine(monsterhp);
+            //Console.WriteLine(monsterhp);
 
             Character a = new Character();
 
