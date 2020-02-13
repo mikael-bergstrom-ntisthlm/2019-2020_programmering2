@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{439AE52E-C325-4853-B6E4-AD6CF89614F4}</ProjectGuid>
+    <ProjectGuid>{06FEA6FD-C85F-4545-8178-2C4CB24CEA54}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TE17A_Generiska_klasser</RootNamespace>
-    <AssemblyName>TE17A Generiska klasser</AssemblyName>
+    <RootNamespace>TE17B_Filhantering</RootNamespace>
+    <AssemblyName>TE17B_Filhantering</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Container.cs" />
+    <Compile Include="Monster.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Thing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="monsters.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

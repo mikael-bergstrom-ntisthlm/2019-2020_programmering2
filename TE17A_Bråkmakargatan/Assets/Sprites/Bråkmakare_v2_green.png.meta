@@ -31,7 +31,7 @@ TextureImporter:
     second: "Br\xE5kmakare_v2_green_8"
   - first:
       213: -7186684499999866148
-    second: "Br\xE5kmakare_v2_green_9"
+    second: Jump
   - first:
       213: -934056970135361168
     second: "Br\xE5kmakare_v2_green_10"
@@ -350,7 +350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Br\xE5kmakare_v2_green_9"
+      name: Jump
       rect:
         serializedVersion: 2
         x: 144
