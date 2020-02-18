@@ -18,6 +18,15 @@ namespace TE17C_ApiServer.Controllers
             new Pokemon() {Name = "Bengt-Göran", Strength = 9001}
         };
 
+        [HttpPost]
+        public ActionResult Post(Pokemon newPokemon)
+        {
+            pokemons.Add(newPokemon);
+            Console.WriteLine(newPokemon.Name + " was created");
+
+            return Created("", newPokemon);
+        }
+
 
         [HttpGet]
         public ActionResult<List<Pokemon>> Get()

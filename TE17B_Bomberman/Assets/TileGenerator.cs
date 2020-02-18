@@ -8,10 +8,10 @@ public class TileGenerator : MonoBehaviour
     GameObject tile;
 
     [SerializeField]
-    int width = 5;
+    protected int width = 5;
 
     [SerializeField]
-    int height = 5;
+    protected int height = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -29,16 +29,14 @@ public class TileGenerator : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 PlaceTile(offset, x, y);
-
             }
-
         }
     }
 
-    private void PlaceTile(Vector3 offset, int x, int y)
+    protected virtual void PlaceTile(GameObject tile, Vector3 offset, int x, int y)
     {
         GameObject newTile = Instantiate(tile,
-            new Vector3(x, y) - offset,
+            new Vector3(x, y, transform.position.z) - offset,
             Quaternion.identity);
 
         newTile.name = "(" + x + "," + y + ")";
@@ -46,9 +44,9 @@ public class TileGenerator : MonoBehaviour
         newTile.transform.parent = this.transform;
     }
 
-    private void PlaceTile()
+    protected virtual void PlaceTile(Vector3 offset, int x, int y)
     {
-
+        PlaceTile(tile, offset, x, y);
     }
 
 }

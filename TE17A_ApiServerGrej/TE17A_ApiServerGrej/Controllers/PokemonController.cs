@@ -7,9 +7,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TE17A_ApiServerGrej.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/pokemon")]
     [ApiController]
     public class PokemonController : ControllerBase
     {
+
+        [HttpGet]
+        public ActionResult MyPerfectGet()
+        {
+            return Ok("Nu avslutar vi lektionen. Ha en trevlig helg!");
+        }
+
+
     }
 }

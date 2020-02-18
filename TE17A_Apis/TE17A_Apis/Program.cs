@@ -15,6 +15,10 @@ namespace TE17A_Apis
             RestClient client = new RestClient("https://pokeapi.co/api/v2/");
 
             RestRequest request = new RestRequest("pokemon/muk");
+            request.AddHeader("Content-Type", "application/json");
+
+            request.AddJsonBody(new Pokemon());
+            
 
             IRestResponse response = client.Get(request);
 

@@ -1,0 +1,3 @@
+﻿Goomba;10
+Koopa Troopa;20
+Zombie;30
